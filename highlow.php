@@ -19,15 +19,3 @@ while ($guess != $number) {
 }
 
 if ($guess == $number) { fwrite(STDOUT, "Wow!  What a guesser you are.  Good job!\n"); }
-
-/*	do { 
-
-		echo "Ok; here we go - \n";
-
-		if ($guess < $number) { fwrite(STDOUT, "Higher..."); }
-			elseif ($guess > $number) { fwrite(STDOUT, "Lower..."); } 
-			
-	 }; while ($guess != $number) ;
-
-	 echo "This is outside the do-while loop.\n" 
-*/
