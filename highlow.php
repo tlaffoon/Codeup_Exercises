@@ -2,52 +2,53 @@
 	
 // -------------------------------------------------- //
 
-	// Set initial random number between 1 and 100.
+// Set initial random number between 1 and 100.
 	$number = rand(1, 100);
 
 // -------------------------------------------------- //
 
-	// Prompt for user name.
+// Prompt for user name.
 	fwrite(STDOUT, "Hello!  What is your name?\n") && 
 		exec('say "Hello!  What is your name?"');
 
-		// Get user name from user input.
-		$name = fgets(STDIN);
+// Get user name from user input.
+	$name = fgets(STDIN);
 
 // -------------------------------------------------- //
 
-	// Output greeting and prompt for action.
+// Output greeting and prompt for action.
 	fwrite(STDOUT, "Hey there, $name") && exec('say "Hey there, $name"');
 	fwrite(STDOUT, "Think you can guess my number?\n") && exec('say "Think you can guess my number?"');
 
 // -------------------------------------------------- //
 
-	// Get User Input for first guess.
+// Get User Input for first guess.
 	$guess = fgets(STDIN);
 
 // -------------------------------------------------- //
 
-	// Initialize iterative count outside of main while loop.
+// Initialize iterative count outside of main while loop.
 	$count = 1;
 
 // -------------------------------------------------- //
 
-while ($guess != $number) { 
+// Begin Main Loop
+	while ($guess != $number) { 
 
   // increment the count each time through loop.
-  $count += 1;
+  		$count += 1;
 
     // Check to see if guess is higher than number, then prompt.
 	if ($guess < $number) { 
 		fwrite(STDOUT, "Higher...") && exec('say "Higher!"'); 
-			  $guess = fgets(STDIN); 
-			} 
+			$guess = fgets(STDIN); 
+	} 
 
-		// Check to see if guess is lower than number, then prompt.
-		elseif ($guess > $number) { 
-			fwrite(STDOUT, "Lower...") && exec('say "Lower!"'); 
-				  $guess = fgets(STDIN); 
-				}
+	// Check to see if guess is lower than number, then prompt.
+	elseif ($guess > $number) { 
+		fwrite(STDOUT, "Lower...") && exec('say "Lower!"'); 
+			$guess = fgets(STDIN); 
+	}
 }
 
 // -------------------------------------------------- //
