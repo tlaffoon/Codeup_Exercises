@@ -35,16 +35,16 @@
 // Begin Main Loop
 	while ($guess != $number) { 
 
-  // increment the count each time through loop.
+// increment the count each time through loop.
   		$count += 1;
 
-    // Check to see if guess is higher than number, then prompt.
+// Check to see if guess is higher than number, then prompt.
 	if ($guess < $number) { 
 		fwrite(STDOUT, "Higher...") && exec('say "Higher!"'); 
 			$guess = fgets(STDIN); 
 	} 
 
-	// Check to see if guess is lower than number, then prompt.
+// Check to see if guess is lower than number, then prompt.
 	elseif ($guess > $number) { 
 		fwrite(STDOUT, "Lower...") && exec('say "Lower!"'); 
 			$guess = fgets(STDIN); 
