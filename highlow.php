@@ -12,8 +12,10 @@
 
 	$guess = fgets(STDIN);
 
-while ($guess != $number) { 
+	$count = 1;
 
+while ($guess != $number) { 
+  $count += 1;
 	if ($guess < $number) { 
 		fwrite(STDOUT, "Higher...") && exec('say "Higher!"'); 
 			  $guess = fgets(STDIN); 
@@ -25,6 +27,6 @@ while ($guess != $number) {
 }
 
 if ($guess == $number) { 
-	fwrite(STDOUT, "Wow!  What a guesser you are.  Good job!\n") &&
-		exec('say "Wow!  What a guesser you are.  Good job!"'); 
+	fwrite(STDOUT, "Wow!  You guessed my number in $count tries.  Good job!\n") &&
+		exec('say "Wow!  What a guesser you are!  Good job!"'); 
 	}
