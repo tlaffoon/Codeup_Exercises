@@ -1,2 +1,3 @@
 # Codeup Examples for Baddies Cohort
-This is **totally** a readme file.
+
+## This repository contains solutions to exercises within the Codeup online curriculum.
