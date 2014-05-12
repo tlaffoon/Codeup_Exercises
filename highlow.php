@@ -8,7 +8,7 @@
 // -------------------------------------------------- //
 
 // Prompt for user name.
-	fwrite(STDOUT, "Hello!  What is your name?\n") && exec('say "Hello!  What is your name?"');
+	fwrite(STDOUT, "Hello!  What is your name?\n") && exec("say 'Hello!  What is your name?'");
 
 // Get user name from user input.
 	$name = fgets(STDIN);
@@ -16,8 +16,9 @@
 // -------------------------------------------------- //
 
 // Output greeting and prompt for action.
-	fwrite(STDOUT, "Hey there, $name") && exec('say "Hey there, $name"');
-	fwrite(STDOUT, "Think you can guess my number?\n") && exec('say "Think you can guess my number?"');
+	fwrite(STDOUT, "Hey there, $name\n") && exec("say 'Hey there, $name'");
+	fwrite(STDOUT, "I'm thinking of a number between 0 and 100. Think you can guess my number?\n") 
+		&& exec('say "Think you can guess my number?"');
 
 // -------------------------------------------------- //
 
@@ -39,7 +40,7 @@
 
 // Check to see if guess is higher than number, then prompt.
 	if ($guess < $number) { 
-		fwrite(STDOUT, "Higher...") && exec('say "Higher!"'); 
+		fwrite(STDOUT, "Higher...\n") && exec('say "Higher!"'); 
 		
 		// Prompt user for another guess.
 		$guess = fgets(STDIN); 
@@ -47,10 +48,10 @@
 
 // Check to see if guess is lower than number, then prompt.
 	elseif ($guess > $number) { 
-		fwrite(STDOUT, "Lower...") && exec('say "Lower!"'); 
+		fwrite(STDOUT, "Lower...\n") && exec('say "Lower!"'); 
 		
 		// Prompt user for another guess.
-		$guess = fgets(STDIN); 
+		$guess = fgets(STDIN);
 	}
 }
 
@@ -59,7 +60,7 @@
 // Once the guess matches the number, the main while loop exits and this code runs.
 if ($guess == $number) { 
 	fwrite(STDOUT, "Wow!  You guessed my number in $count tries.  Good job!\n") &&
-	exec('say "Wow!  What a guesser you are!  Good job!"'); 
+		exec("say 'Wow!  You guessed my number in $count tries.  Good job!'\n"); 
 	}
 
 // -------------------------------------------------- //
