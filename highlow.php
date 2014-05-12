@@ -16,7 +16,7 @@
 // -------------------------------------------------- //
 
 // Output greeting and prompt for action.
-	fwrite(STDOUT, "Hey there, $name\n") && exec("say 'Hey there, $name'");
+	fwrite(STDOUT, "Hey there, $name") && exec("say 'Hey there, $name'");
 	fwrite(STDOUT, "I'm thinking of a number between 0 and 100. Think you can guess my number?\n") 
 		&& exec('say "Think you can guess my number?"');
 
@@ -59,8 +59,8 @@
 
 // Once the guess matches the number, the main while loop exits and this code runs.
 if ($guess == $number) { 
-	fwrite(STDOUT, "Wow!  You guessed my number in $count tries.  Good job!\n") &&
-		exec("say 'Wow!  You guessed my number in $count tries.  Good job!'\n"); 
+	fwrite(STDOUT, "Wow!  $number was my number! You guessed it in $count tries.  Good job!\n") &&
+		exec("say 'Wow!  $number was my number! You guessed it in $count tries.  Good job!'\n"); 
 	}
 
 // -------------------------------------------------- //
