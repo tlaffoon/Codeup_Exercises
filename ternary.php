@@ -14,7 +14,7 @@ if ($a == $b) {
     echo "$a is not equal to $b";
 }
 
-
+// Example ternary 
 $a = 5;
 $b = 10;
 
