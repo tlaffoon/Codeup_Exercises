@@ -5,7 +5,7 @@
 
 		for ($x=$min; $x<=$max; $x+=1) {
 			
-			if (!($x % 3) && !($x % 5) ) {
+			if (!($x % 3) && !($x % 5)) {
 				echo "FizzBuzz" . PHP_EOL;
 				$fbcount++;
 
