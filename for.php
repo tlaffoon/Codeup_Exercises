@@ -1,6 +1,5 @@
 <?php
 
-
 fwrite(STDOUT, 'Please input your starting number: ' . PHP_EOL) ;
 $n1 = (int) fgets(STDIN);
 
@@ -12,7 +11,8 @@ $n3 = (int) fgets(STDIN);
 
 if (is_numeric($n1) && is_numeric($n2) && is_numeric($n3)) {
 
-	for ($x=$n1; $x<=$n2; $x+=$n3) {
-		echo "\$x is equal to {$x}\n" ;
-	}
+		for ($x=$n1; $x<=$n2; $x+=$n3) {
+			echo "\$x is equal to {$x}" . PHP_EOL ;
+		}
+		
 }
