@@ -5,15 +5,15 @@
 
 		for ($x=$min; $x<=$max; $x+=1) {
 			
-			if (($x % 3) == 0 && ($x % 5) == 0) {
+			if (!($x % 3) && !($x % 5) ) {
 				echo "FizzBuzz" . PHP_EOL;
 				$fbcount++;
 
-			} elseif (($x % 3) == 0) {
+			} elseif (!($x % 3)) {
 				echo "Fizz" . PHP_EOL;
 				$fcount++;
 
-			} elseif (($x % 5) == 0) {
+			} elseif (!($x % 5)) {
 				echo "Buzz" . PHP_EOL;
 				$bcount++;
 
