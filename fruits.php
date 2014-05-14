@@ -18,16 +18,17 @@ foreach ($fruits as $fruit) {
 
 // Modify the array so that "fruit name" => "color"
 
-$fruits = 
-[	'banana' => YELLOW, 
+$fruits = [	
+	'banana' => YELLOW, 
 	'apple' => RED, 
 	'orange' => ORANGE, 
 	'strawberry' => PINK, 
-	'mango' => BLEH ] ;
+	'mango' => BLEH 
+];
 
 // Print modified array using a foreach
 
-foreach ($fruits as $key => $value) {
-	echo "$key is $value" . PHP_EOL ;
+foreach ($fruits as $fruit => $color) {
+	echo "$fruit is $color" . PHP_EOL ;
 }
 
