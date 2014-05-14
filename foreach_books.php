@@ -25,11 +25,17 @@ $books = array(
 
 
 foreach ($books as $book => $properties) {
-    echo "\n{$book}" . PHP_EOL ;
-    echo '-------------' .  PHP_EOL ;
+    // print books after 1950
+    if ($properties['published'] > 1950) {
+        echo "\n{$book}" . PHP_EOL ;
+        echo '-------------' .  PHP_EOL ;    
     
-    foreach ($properties as $property => $value) {
-        echo "{$property}: {$value}" . PHP_EOL ;
+        foreach ($properties as $property => $value) {
+            echo "{$property}: {$value}" . PHP_EOL ;
+        } 
     }
 }
+
+
+
 
