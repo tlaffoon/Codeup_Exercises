@@ -16,9 +16,14 @@ function divide($a, $b) {
     echo ($a / $b)  . PHP_EOL ;
 }
 
+function modulus($a, $b) {
+	echo ($a % $b) . PHP_EOL ;
+}
+
 add(7,4);
 subtract(7,4);
 multiply(7,4);
 divide(7,4);
+modulus(10,100);
 
 ?>
