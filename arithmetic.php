@@ -1,23 +1,43 @@
 <?php
 
 function add($a, $b) {
-    echo ($a + $b) . PHP_EOL ;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo ($a + $b) . PHP_EOL ;
+    } else {
+        echo "ERROR: Both arguments must be numbers\n";
+    }
 }
 
 function subtract($a, $b) {
-    echo ($a - $b)  . PHP_EOL ;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo ($a - $b) . PHP_EOL ;
+    } else {
+        echo "ERROR: Both arguments must be numbers\n";
+    }
 }
 
 function multiply($a, $b) {
-    echo ($a * $b)  . PHP_EOL ;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo ($a * $b) . PHP_EOL ;
+    } else {
+        echo "ERROR: Both arguments must be numbers\n";
+    }
 }
 
 function divide($a, $b) {
-    echo ($a / $b)  . PHP_EOL ;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo ($a / $b) . PHP_EOL ;
+    } else {
+        echo "ERROR: Both arguments must be numbers\n";
+    }
 }
 
 function modulus($a, $b) {
-	echo ($a % $b) . PHP_EOL ;
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo ($a % $b) . PHP_EOL ;
+    } else {
+        echo "ERROR: Both arguments must be numbers\n";
+    }
 }
 
 add(7,4);
