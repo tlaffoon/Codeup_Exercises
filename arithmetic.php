@@ -42,8 +42,8 @@ switch ($operation) {
 /*		---------------------------------		*/
 
 function check($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) {
-		return true;
+  if (is_numeric($a) && is_numeric($b)) {
+	return true;
 	} else 
 		echo "ERROR: Invalid input. \$a = $a, \$b = $b" . PHP_EOL;
 		return false;
@@ -76,7 +76,7 @@ function remainder($a, $b) {
 function divide($a, $b) {
     if (check($a, $b)) {
     } elseif ($b != 0) {
-      return ($a / $b) . PHP_EOL;
+        return ($a / $b) . PHP_EOL;
     } else echo "Man, you aren't trying to divide by zero - are you?" . PHP_EOL;
 }
 
