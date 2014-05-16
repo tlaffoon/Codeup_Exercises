@@ -44,32 +44,32 @@ switch ($operation) {
 function check($a, $b) {
   if (is_numeric($a) && is_numeric($b)) {
 	return true;
-	} else 
+	  } else 
 		echo "ERROR: Invalid input. \$a = $a, \$b = $b" . PHP_EOL;
 		return false;
 }
 
 function add($a, $b) {
 	if (check($a, $b)) {
-   	return ($a + $b) . PHP_EOL;
+	return ($a + $b) . PHP_EOL;
    }
 }
 
 function subtract($a, $b) {
 	if (check($a, $b)) {
-    return ($a - $b) . PHP_EOL;
+	return ($a - $b) . PHP_EOL;
 	}
 }
 
 function multiply($a, $b) {
-    if (check($a, $b)) {
-    return ($a * $b) . PHP_EOL;
+	if (check($a, $b)) {
+	return ($a * $b) . PHP_EOL;
 	}
 }
 
 function remainder($a, $b) {
-    if (check($a, $b)) {
-   	return ($a % $b) . PHP_EOL;
+	if (check($a, $b)) {
+	return ($a % $b) . PHP_EOL;
 	}
 }	
 
