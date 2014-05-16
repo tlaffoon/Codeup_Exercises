@@ -1,7 +1,45 @@
 <?php
 
+if ($argc > 0) {
+
 $a = $argv[1];
 $b = $argv[2];
+
+echo 'A, S, D, M, R';
+$operation = trim(fgets(STDIN));
+
+switch ($operation) {
+	case 'A':
+		echo add($a, $b);
+		break;
+
+	case 'S':
+		echo subtract($a, $b);
+		break;
+
+	case 'D':
+		echo divide($a, $b);
+		break;
+
+	case 'M':
+		echo multiply($a, $b);
+		break;
+
+	case 'R':
+		echo remainder($a, $b);
+		break;
+	
+	default:
+		echo "default \n";
+		break;
+} else
+	echo add();
+	echo subtract();
+	echo multiply();
+	echo divide();
+	echo remainder();
+
+/*		---------------------------------		*/
 
 function check($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
@@ -25,7 +63,6 @@ function subtract($a, $b) {
 
 function multiply($a, $b) {
     if (check($a, $b)) {
-    	echo "say what?";
     return ($a * $b) . PHP_EOL;
 	}
 }
@@ -43,35 +80,3 @@ function divide($a, $b) {
     } else echo "Man, you aren't trying to divide by zero - are you?" . PHP_EOL;
 }
 
-
-
-fwrite(STDOUT, 'A, S, D, M, R' . PHP_EOL);
-$operation = trim(fgets(STDIN));
-
-switch ($operation) {
-	case 'A':
-		echo add($a, $b);
-		break;
-
-	case 'S':
-		subtract($a, $b);
-		break;
-
-	case 'D':
-		divide($a, $b);
-		break;
-
-	case 'M':
-		multiply($a, $b);
-		break;
-
-	case 'R':
-		remainder($a, $b);
-		break;
-	
-	default:
-		echo "default \n";
-		break;
-}
-
-?>
