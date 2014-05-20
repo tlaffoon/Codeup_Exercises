@@ -1,7 +1,10 @@
 <?php
 
-$names = ['Dana', 'Tina', 'Mike', 'Amy', 'Adam', 'George', 'Steven', 'Dale', 'Steve'];
+$names1 = ['Dana', 'Tina', 'Mike', 'Amy', 'Adam', 'George', 'Steven', 'Dale', 'Steve'];
 $names2 = ['Tina', 'Dean', 'Amy', 'Mel', 'Michael', 'George', 'Steve', 'Freddie'];
+
+/* ----------------------------------------------- */
+// One method to solve this exercise.
 
 function array_has_value($needle, $haystack) {
 
@@ -32,33 +35,24 @@ function array_common_count($array1, $array2) {
 
 // var_dump(array_common_count($names, $names2));
 
-$number = array_common_count($names, $names2);
+$number = array_common_count($names1, $names2);
 
 echo "The number of names in common is: $number\n" ;
+echo "-----------------------------------------\n" ;
+/* ----------------------------------------------- */
+// Another method.
 
+function merge_and_count($array1, $array2) {
 
-/*
-function list_unique($array1, $array2) {
+$merged_and_counted = array_count_values(array_merge($array1, $array2));
 
-	return array_unique(array_merge($array1, $array2));
+foreach ($merged_and_counted as $name => $count) {
+	if ($count >= 2) {
+		$dupNamesCount++;
+		$dupNameList .= "\n$name appeared {$count} times.";
+	}
+}
+	return "There are {$dupNamesCount} duplicate names: {$dupNameList}\n";
 }
 
-$unique_names = list_unique($names, $names2);
-
-
-function list_unique_names_and_counts($unique_names, $array1, $array2) {
-
-// List unique names and counts.
-
-	foreach ($unique_names as $unique_name) {
-
-		if (array_has_value($unique_name, $array1)) {
-			# code...
-		}
-
-		$unique_count = array_common_count($unique_name, $array1, $array2);
- 		echo "$unique_name appears $unique_count times.\n";
- 	} 
-}
-
-list_unique_names_and_counts($unique_names, $names, $names2);  */
+echo merge_and_count($names1, $names2);
